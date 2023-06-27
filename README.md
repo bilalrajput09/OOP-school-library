@@ -1,25 +1,9 @@
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
+<a name="readme-top"></a>
 
-Modify this file to match your project and remove sections that don't apply.
+<div align="center">
+<h1> <b> OOP School Library </b> <hr/>
 
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-After you're finished please remove all the comments and instructions!
--->
-
+</div>
 
 <!-- TABLE OF CONTENTS -->
 
@@ -32,6 +16,8 @@ After you're finished please remove all the comments and instructions!
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -42,38 +28,93 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Decode-Morse-Message <a name="about-project"></a>
+# 📖 [Ruby_OOP_school_library] <a name="about-project"></a>
 
+> ## **[Ruby_OOP_school_library]** :- The OOP school library project in Ruby is a software application designed to help school librarians manage and organize their library resources efficiently using object-oriented programming principles. It allows librarians to add new books, manage book loans, and keep track of overdue books while providing a search feature for students and teachers.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-<summary>Language</summary>
+  <summary>Client</summary>
   <ul>
-    <li><a href="https://www.ruby-lang.org/en/">ruby</a></li>
+    <li><p> <b>Ruby: </b> The primary programming language for the project.</p></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li>none</li>
+  </ul>
+</details>
+
+<details>
+<summary>Database</summary>
+  <ul>
+    <li>none</li>
   </ul>
 </details>
 
 <!-- Features -->
 
-### Key Features <a name="key-features"></a>
+## Key Features <a name="key-features"></a>
 
-- **Decode Morse code:** '.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
+- Book inventory management: The system should allow librarians to add, edit, and delete books from the library inventory.
+- Simple command-line user-friendly interface.
+- User management: The system should allow librarians to create, edit, and delete user accounts and manage user permissions.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>`
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running, follow these steps.
+### To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need: to install ruby 
+In order to run this project you need:
 
+- A Computer (MAC or PC)
+- Code editor (VSCode,Atom etc...)
+- A browser (Chrome,Mozilla,Safari etc...)
+- Version Control System (Git and Github)
+- Ruby installed: To run a Ruby project, users must have Ruby installed on their system. You can include the minimum required version of Ruby needed to run the project.
+
+### Setup
+
+Clone this repository to your desired folder:
+
+```sh
+  cd my-folder
+  git clone https://github.com/bilalrajput09/OOP-school-library.git
+```
+
+## Install
+
+Install this project with:
+
+- Install RubyInstaller [Win](https://rubyinstaller.org/)
+- Install Ruby for [macOS](https://www.ruby-lang.org/en/documentation/installation/#homebrew)
+- Install Ruby for [Linux](https://www.makeuseof.com/install-ruby-on-linux/)
+
+## Usage
+
+To run a Ruby file in the command line, follow these steps:
+
+Open a command prompt or terminal window on your computer.
+
+Navigate to the directory where the Ruby file is stored using the cd command.
+
+Type the following command to run the Ruby file:
+
+```sh
+ruby filename.rb
+```
+
+### - where filename.rb is the name of the Ruby file you want to run.
 
 <!-- AUTHORS -->
 
@@ -85,16 +126,17 @@ In order to run this project you need: to install ruby
 - Twitter: [@bilal_rajput09](https://twitter.com/bilal_rajput09)
 - LinkedIn [Bilal Rajput](https://www.linkedin.com/in/bilal-ahmed-18b12019a/)
 
-
-👤 **Tom Daniel**
-
-- GitHub: [@tomdan-ai](https://github.com/bilalrajput09)
-- Twitter: [@kvng Webstar](https://twitter.com/bilal_rajput09)
-- LinkedIn [Tom Udoh](https://www.linkedin.com/in/tomudoh/)
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Graphical user interface** :- The program could be improved by adding a graphical user interface (GUI) to make it more user-friendly and accessible to non-technical users.
+- [ ] **User authentication** : Add a feature for user authentication to ensure that only authorized users can access the library system.
+- [ ] **Integration with external sources** :- Integrate the library system with external sources such as Google Books or Amazon to provide additional information about books.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
@@ -102,7 +144,7 @@ In order to run this project you need: to install ruby
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/bilalrajput09/Decode-Morse-message/issues/).
+Feel free to check the [issues page](https://github.com/bilalrajput09/OOP-school-library/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,7 +152,7 @@ Feel free to check the [issues page](https://github.com/bilalrajput09/Decode-Mor
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project you can buy me coffee using the contact details above or give it a star.
+> If you like this project rate it and give it a star ⭐️...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -118,15 +160,34 @@ If you like this project you can buy me coffee using the contact details above o
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-We would like to thank Microverse for the learning opportunity.
+> We would like to thank the [Microverse team](https://www.microverse.org/) for allowing us to work on this Ruby OOP School Library project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FAQ (optional) -->
 
+## ❓ FAQ <a name="faq"></a>
+
+- **How do I install and run the project?**
+
+  - To install and run the project, you will need to have Ruby installed on your computer. Once you have Ruby installed, you can download the project files and run the program from the command line using the following command:
+    <br/>
+    `ruby mylist.rb`
+
+- **What technologies and libraries are used in the project?**
+
+  - The project is written in Ruby and does not require any external libraries or dependencies.
+
+- **How can I contribute to the project?**
+
+  - Contributions to the project are welcome! Please feel free to submit bug reports, feature requests, or pull requests on the project's GitHub repository.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./license) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>

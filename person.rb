@@ -1,6 +1,6 @@
-require "./nameable"
-require "./capitalize_decorator"
-require "./trimmerDecorator"
+require './nameable'
+require './capitalize_decorator'
+require './trimmer_decorator'
 
 class Person < Nameable
   attr_reader(:id)
@@ -11,6 +11,7 @@ class Person < Nameable
     name: 'Unknown',
     parent_permisson: true
   )
+    super()
     @id = rand(1..10_000)
     @name = name
     @age = age
@@ -32,7 +33,7 @@ class Person < Nameable
   end
 end
 
-person = Person.new(age:22, name:'maximilianus')
+person = Person.new(age: 22, name: 'maximilianus')
 person.correct_name
 capitalized_person = CapitalizeDecorator.new(person)
 puts capitalized_person.correct_name

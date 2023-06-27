@@ -5,7 +5,7 @@ class Student < Person
     classroom:, name: 'Unknown',
     parent_permisson: true
   )
-    super( age: age, name: name, parent_permisson: parent_permisson)
+    super(age: age, name: name, parent_permisson: parent_permisson)
     @classroom = classroom
   end
 
