@@ -3,7 +3,8 @@ require './person'
 class Teacher < Person
   def initialize(
     age:,
-    specialization:, name: 'Unknown',
+    specialization:,
+    name: 'Unknown',
     parent_permisson: true
   )
 
