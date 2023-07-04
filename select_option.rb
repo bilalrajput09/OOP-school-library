@@ -10,5 +10,11 @@ class SelectOption
     '7' => :exit_application
   }
 
-  # 
+  input = gets.chomp
+   if options_hash.key?(input)
+    app.send(options_hash[input])
+   else
+    puts 'INVALID!! Please select again!'
+   end
+ end
 end
