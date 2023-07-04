@@ -1,8 +1,8 @@
 require './app'
-require "./select_option"
+require './select_option'
 def main
   app = App.new
-  select_obj = SelectOption.new()
+  select_obj = SelectOption.new
   loop do
     show_menu
     select_obj.select_option(app)
@@ -20,4 +20,4 @@ def show_menu
   puts '7. Quit'
 end
 
-main()
+main
