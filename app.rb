@@ -120,4 +120,9 @@ class App
       puts "Book: #{rental.book.title}, Date: #{rental.date}"
     end
   end
+
+  def exit_application
+    puts 'Goodbye! see you again....'
+    exit
+  end
 end
