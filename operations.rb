@@ -12,7 +12,10 @@ class Operations
     @store.write_file('books.json', books)
   end
 
+  # rubocop:disable Style/OptionalBooleanParameter
   def store_person(num, age, name, permission = true, specialization = nil)
+    # rubocop:enable Style/OptionalBooleanParameter
+
     persons = []
     persons = @store.read_file('persons.json') if File.exist?('persons.json')
     person = if num == 1
