@@ -126,6 +126,12 @@ ruby filename.rb
 - Twitter: [@bilal_rajput09](https://twitter.com/bilal_rajput09)
 - LinkedIn [Bilal Rajput](https://www.linkedin.com/in/bilal-ahmed-18b12019a/)
 
+👤 **Bilal Ahmed**
+
+- GitHub: [@kayembajonathan](https://github.com/KAYEMBAJONATHAN)
+- LinkedIn: [@kayembajonathan](https://www.linkedin.com/in/jonathan-kayembb56247236/)
+- Twitter: [@JonathanKa97287](@JonathanKa97287)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
