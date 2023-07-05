@@ -1,16 +1,16 @@
 [
   {
     "id":"",
-    "name":"",
+    "name":"Jonathan",
     "parent_permission":true,
     "age":15,
-    "classroom":"red"
+    "classroom":"blue"
     },
     {
     "id": "",
-    "name":"",
+    "name":"Bilal",
     "parent_permission":true,
     "age": 20,
-    "specialization":""
+    "specialization":"Math"
     }
 ]
