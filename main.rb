@@ -1,8 +1,15 @@
 require './app'
 require './select_option'
+require './data_loader'
+
 def main
   app = App.new
   select_obj = SelectOption.new
+  load_data = DataLoader.new(app)
+  load_data.load_books_data
+  load_data.load_person_data
+  load_data.load_rentals
+
   loop do
     show_menu
     select_obj.select_option(app)

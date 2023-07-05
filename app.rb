@@ -3,12 +3,17 @@ require './book'
 require './teacher'
 require './student'
 require './rental'
+require './store'
+require './operations'
 
 class App
+  attr_accessor :people, :books
+
   def initialize
     @rentals = []
     @books = []
     @people = []
+    @operations = Operations.new
   end
 
   def books_list
@@ -23,35 +28,51 @@ class App
     end
   end
 
-  def create_student
-    puts 'Name:'
-    name = gets.chomp
+  def create_student(age = nil, name = nil, permission = nil)
+    if age.nil? && name.nil? && permission.nil?
 
-    puts 'Age:'
-    age = gets.chomp
+      puts 'Name:'
+      name = gets.chomp
 
-    puts 'Has Parent permission? [Y/N]'
-    permission_input = gets.chomp
-    permission = true if %w[Y y].include?(permission_input)
-    permission = false if %w[N n].include?(permission_input)
+      puts 'Age:'
+      age = gets.chomp
 
-    student = Student.new(age: age, classroom: nil, name: name, parent_permisson: permission)
-    @people.push(student)
-    puts 'Student Created!'
+      puts 'Has Parent permission? [Y/N]'
+      permission_input = gets.chomp
+      permission = true if %w[Y y].include?(permission_input)
+      permission = false if %w[N n].include?(permission_input)
+
+      student = Student.new(age: age, classroom: nil, name: name, parent_permisson: permission)
+
+      @people.push(student)
+      @operations.store_person(1, age, name, permission)
+      puts 'Student Created!'
+
+    else
+      student = Student.new(age: age, classroom: nil, name: name, parent_permisson: permission)
+
+      @people.push(student)
+    end
   end
 
-  def create_teacher
-    puts 'Specialization:'
-    specialization = gets.chomp
+  def create_teacher(age = nil, name = nil, specialization = nil)
+    if age.nil? && name.nil? && specialization.nil?
+      puts 'Specialization:'
+      specialization = gets.chomp
 
-    puts 'Age:'
-    age = gets.chomp
+      puts 'Age:'
+      age = gets.chomp
 
-    puts 'Name:'
-    name = gets.chomp
+      puts 'Name:'
+      name = gets.chomp
 
-    @people << Teacher.new(age: age, specialization: specialization, name: name)
-    puts 'Teacher Created!'
+      @people << Teacher.new(age: age, specialization: specialization, name: name)
+      @operations.store_person(2, age, name, nil, specialization)
+
+      puts 'Teacher Created!'
+    else
+      @people << Teacher.new(age: age, specialization: specialization, name: name)
+    end
   end
 
   def create_person
@@ -62,49 +83,69 @@ class App
 
     case input_int
     when 1
-      create_student
+      create_student(nil, nil, nil)
     when 2
-      create_teacher
+      create_teacher(nil, nil, nil)
     end
   end
 
-  def create_book
-    puts 'Title:'
-    title = gets.chomp
+  def create_book(title: false, author: false)
+    if title && author
 
-    puts 'Author:'
-    author = gets.chomp
+      book = Book.new(title, author)
 
-    book = Book.new(title, author)
+      @books.push(book)
+    else
 
-    @books << book
+      puts 'Title:'
+      title = gets.chomp
 
-    puts 'Book Created!'
+      puts 'Author:'
+      author = gets.chomp
+
+      book = Book.new(title, author)
+
+      @books << book
+
+      @operations.store_books(title, author)
+
+      puts 'Book Created!'
+
+    end
   end
 
-  def create_rental
-    puts 'Select a book by number'
+  def create_rental(date = nil, book_id = nil, person_id = nil)
+    if date.nil? && person_id.nil? && book_id.nil?
 
-    @books.each_with_index do |book, i|
-      puts "#{i}) Title: #{book.title}, Author: #{book.author}"
+      puts 'Select a book by number'
+
+      @books.each_with_index do |book, i|
+        puts "#{i}) Title: #{book.title}, Author: #{book.author}"
+      end
+
+      book_i = gets.chomp.to_i
+
+      puts 'Select a person by number (not ID)'
+
+      @people.each_with_index do |p, i|
+        puts "#{i}) Name: #{p.name} , ID: #{p.id}, Age: #{p.age}"
+      end
+
+      p_index = gets.chomp.to_i
+
+      puts 'Date:'
+      date = gets.chomp
+
+      @rentals << Rental.new(date, @books[book_i], @people[p_index])
+
+      @operations.store_rentals(date, book_i, p_index)
+
+      puts 'Rental Created!'
+
+    else
+
+      @rentals << Rental.new(date, book_id, person_id)
     end
-
-    book_i = gets.chomp.to_i
-
-    puts 'Select a person by number (not ID)'
-
-    @people.each_with_index do |p, i|
-      puts "#{i}) Name: #{p.name} , ID: #{p.id}, Age: #{p.age}"
-    end
-
-    p_index = gets.chomp.to_i
-
-    puts 'Date:'
-    date = gets.chomp
-
-    @rentals << Rental.new(date, @books[book_i], @people[p_index])
-
-    puts 'Rental Created!'
   end
 
   def list_person_id_of_rentals
