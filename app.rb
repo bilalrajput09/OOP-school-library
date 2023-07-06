@@ -83,9 +83,9 @@ class App
 
     case input_int
     when 1
-      create_student(age, name, permission)
+      create_student(nil, nil, nil)
     when 2
-      create_teacher(age, name, specialization)
+      create_teacher(nil, nil, nil)
     end
   end
 
