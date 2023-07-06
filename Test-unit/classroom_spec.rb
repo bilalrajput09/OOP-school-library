@@ -2,7 +2,6 @@ require './classroom'
 require './student'
 require './person'
 
-
 describe Classroom do
   subject(:classroom) { Classroom.new('Seven') }
 
