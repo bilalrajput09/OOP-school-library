@@ -1,6 +1,6 @@
 require './classroom'
 require './student'
-require "./person"
+require './person'
 
 
 describe Classroom do
