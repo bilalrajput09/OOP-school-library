@@ -130,7 +130,6 @@ ruby filename.rb
 
 - GitHub: [@kayembajonathan](https://github.com/KAYEMBAJONATHAN)
 - LinkedIn: [@kayembajonathan](https://www.linkedin.com/in/jonathan-kayembb56247236/)
-- Twitter: [@JonathanKa97287](@JonathanKa97287)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
