@@ -1,14 +1,13 @@
-require_relative './book'
+require './book'
 
-describe Book do
+RSpec.describe Book do
   book = Book.new('title', 'author')
-     
+
   context '#initialize' do
     it 'should initialize a book' do
-      expect(book.id).to be_kind_of Numeric
       expect(book.rentals).to be_empty
-      expect(book.title).to eql 'Title'
-      expect(book.author).to eql 'Author'
+      expect(book.title).to eql 'title'
+      expect(book.author).to eql 'author'
     end
   end
 

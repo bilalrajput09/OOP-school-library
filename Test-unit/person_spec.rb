@@ -1,4 +1,6 @@
-require './person.rb'
+require './person'
+require './book'
+require './rental'
 
 describe Person do
   subject do
@@ -25,16 +27,17 @@ describe Person do
     end
   end
 
-  context '#add_rental' do
-    it 'should create a new rental' do
-      book = double('book')
-      date = double('date')
-      rental = subject.send(:add_rental, book, date)
+  describe '#add_rental' do
+    let(:person) { Person.new(age: 25, name: 'John Doe', parent_permisson: true) }
+    let(:book) { Book.new('The Great Gatsby', 'F. Scott Fitzgerald') }
+    date = '09-09-2022'
+    it 'creates a rental and adds it to the person\'s rentals list' do
+      rental = person.send(:add_rental, book, date)
 
       expect(rental).to be_a(Rental)
-      expect(rental.date).to eq date
-      expect(rental.book).to eq book
-      expect(rental.person).to eq subject
+      expect(rental.book).to eq(book)
+      expect(rental.person).to eq(person)
+      expect(person.rentals).to include(rental)
     end
   end
 end

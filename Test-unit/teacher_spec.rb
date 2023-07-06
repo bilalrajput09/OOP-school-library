@@ -1,8 +1,8 @@
-require_relative './teacher'
+require './teacher'
 
 describe Teacher do
   subject do
-    Teacher.new(58, 'Math')
+    Teacher.new(age: 58, specialization: 'Math')
   end
 
   context '#initialize' do
@@ -10,7 +10,7 @@ describe Teacher do
       expect(subject.name).to eq 'Unknown'
       expect(subject.age).to eq 58
       expect(subject.specialization).to eql 'Math'
-      expect(subject.parent_permission).to be true
+      expect(subject.parent_permisson).to be true
     end
   end
 

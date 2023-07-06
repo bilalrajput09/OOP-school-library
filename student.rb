@@ -1,5 +1,7 @@
 require './person'
 class Student < Person
+  attr_reader :classroom
+
   def initialize(
     age:,
     classroom:,
@@ -17,5 +19,6 @@ class Student < Person
   def classroom=(classroom)
     @classroom = classroom
     classroom.student.push(self) unless classroom.student.include?(self)
+    
   end
 end
