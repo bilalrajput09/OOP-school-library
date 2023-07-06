@@ -29,7 +29,7 @@ class Operations
 
   def store_rentals(date, book_id, person_id)
     rentals = []
-    rentals = @store.read_file('rentals.json') if File.exist?('rentals.json')
+
     rental = { date: date, book_id: book_id, person_id: person_id }
     rentals.push(rental)
     @store.write_file('rentals.json', rentals)
